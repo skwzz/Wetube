@@ -7,15 +7,18 @@ import userRouter from "./routers/userRouter";
 import videoRouter from "./routers/videoRouter";
 import globalRouter from "./routers/globalRouter";
 import routes from "./routes";
+import { localsMiddleWare } from "./middleware";
 
 const app = express();
 
+app.use(helmet()); //FOR SECURITY
 app.set("view engine", "pug");
 app.use(cookieParser());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(helmet()); //FOR SECURITY
 app.use(morgan("dev")); // FOR LOGGING
+
+app.use(localsMiddleWare);
 
 app.use(routes.home, globalRouter); // --> "/"
 app.use(routes.users, userRouter); // --> "/users"
