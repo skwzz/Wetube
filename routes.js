@@ -27,15 +27,15 @@ const routes = {
   search: SEARCH,
   // users
   users: USERS,
-  user_detail: USER_DETAIL,
-  edit_profile: EDIT_PROFILE,
-  change_password: CHANGE_PASSWORD,
+  userDetail: USER_DETAIL,
+  editProfile: EDIT_PROFILE,
+  changePassword: CHANGE_PASSWORD,
   //videos
   videos: VIDEOS,
   upload: UPLOAD,
-  video_detail: VIDEO_DETAIL,
-  edit_video: EDIT_VIDEO,
-  delete_video: DELETE_VIDEO
+  videoDetail: VIDEO_DETAIL,
+  editVideo: EDIT_VIDEO,
+  deleteVideo: DELETE_VIDEO
 };
 
 export default routes;
