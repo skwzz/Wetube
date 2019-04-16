@@ -1,8 +1,5 @@
 import mongoose from "mongoose";
 
-// model
-// schema
-
 const VideoSchema = new mongoose.Schema({
   fileUrl: {
     type: String,
@@ -10,18 +7,18 @@ const VideoSchema = new mongoose.Schema({
   },
   title: {
     type: String,
-    required: "Title is required"
+    required: "Tilte is required"
   },
   description: String,
   views: {
     type: Number,
     default: 0
   },
-  createAt: {
+  createdAt: {
     type: Date,
     default: Date.now
   },
-  comment: [
+  comments: [
     {
       type: mongoose.Schema.Types.ObjectId,
       ref: "Comment"
