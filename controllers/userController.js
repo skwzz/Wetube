@@ -1,5 +1,5 @@
-import passport from "../passport";
 import routes from "../routes";
+import passport from "passport";
 import User from "../models/User";
 
 // GLOBAL ROUTER
